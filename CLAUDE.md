@@ -17,6 +17,10 @@ Dieses Repository ist die Website des Fördervereins der Kita Reischlestraße (A
 - Bewusst **kein** iframe-Wrapper (im Teambuch-Repo historisch bedingt, hier nicht nötig).
 - Abschnitte „Über uns" und „Kontakt" sind aktuell Platzhalter („Inhalte folgen") – echte Vereinsinhalte (Ziele, Vorstand, Kontaktdaten, Bankverbindung etc.) müssen von der Nutzerin geliefert werden, nie erfinden.
 
+## Foto-Galerien
+- `slideshow.js` (1:1 aus dem Teambuch-Repo übernommen, generisch) macht jede `.special-photo-gallery` automatisch im Vollbild swipebar (Touch, Pfeiltasten, Escape). Muster: `<div class="special-photo-gallery" aria-label="..."><figure><a class="gallery-link" href="#id"><img ...></a><figcaption>...</figcaption></figure>...</div>`.
+- Solange für einen Bereich noch keine echten Fotos vorliegen, `.special-photo-gallery-placeholder` verwenden (gleiches Scroll-Layout, aber `.image-placeholder`-Boxen mit "Foto folgt" statt `<img>` – bewusst NICHT an slideshow.js gekoppelt, da es ohne echtes Bild nichts zum Aufklappen gäbe). Sobald echte Fotos da sind: Klasse zu `.special-photo-gallery` wechseln und `<img>` einsetzen, dann greift die Vollbildansicht automatisch.
+
 ## Git-Workflow
 - Repository wurde am 26. Juli 2026 leer angelegt; der erste Commit (Grundgerüst mit Titelbild/Logo) ging direkt auf `main`, da zu dem Zeitpunkt noch nichts Bestehendes zu schützen war.
 - Für alle folgenden Änderungen: sinnvollerweise auf einem Feature-Branch entwickeln und vor dem Mergen nach `main` kurz Rückmeldung von der Nutzerin einholen (wie beim Teambuch).
