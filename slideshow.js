@@ -7,7 +7,10 @@
     overlay.innerHTML = `
       <button class="slideshow-close" aria-label="Schließen">&times;</button>
       <button class="slideshow-prev" aria-label="Vorherige Folie">&lsaquo;</button>
-      <div class="slideshow-viewport"><img class="slideshow-image" alt=""></div>
+      <div class="slideshow-viewport">
+        <img class="slideshow-image" alt="">
+        <div class="slideshow-placeholder">Foto folgt</div>
+      </div>
       <button class="slideshow-next" aria-label="Nächste Folie">&rsaquo;</button>
       <div class="slideshow-caption"></div>
       <div class="slideshow-counter"></div>
@@ -16,13 +19,21 @@
     document.body.style.overflow = 'hidden';
 
     const imgEl = overlay.querySelector('.slideshow-image');
+    const placeholderEl = overlay.querySelector('.slideshow-placeholder');
     const captionEl = overlay.querySelector('.slideshow-caption');
     const counterEl = overlay.querySelector('.slideshow-counter');
 
     function render() {
       const slide = slides[index];
-      imgEl.src = slide.src;
-      imgEl.alt = slide.alt || title;
+      if (slide.src) {
+        imgEl.src = slide.src;
+        imgEl.alt = slide.alt || title;
+        imgEl.style.display = '';
+        placeholderEl.style.display = 'none';
+      } else {
+        imgEl.style.display = 'none';
+        placeholderEl.style.display = 'flex';
+      }
       captionEl.textContent = slide.caption || '';
       captionEl.style.display = slide.caption ? '' : 'none';
       counterEl.textContent = `${index + 1} / ${slides.length}`;
@@ -99,8 +110,10 @@
 
   // Every existing photo gallery: tapping an image opens the same
   // fullscreen viewer, starting at the tapped image, swipeable through
-  // the rest of that gallery.
-  document.querySelectorAll('.special-photo-gallery').forEach((gallery) => {
+  // the rest of that gallery. Figures without a real photo yet (still
+  // showing a "Foto folgt" placeholder) open the same viewer with a
+  // placeholder slide instead of crashing on a missing <img>.
+  document.querySelectorAll('.special-photo-gallery, .special-photo-gallery-placeholder').forEach((gallery) => {
     const figures = [...gallery.querySelectorAll(':scope > figure')];
     if (!figures.length) return;
 
@@ -108,9 +121,9 @@
       const img = figure.querySelector('img');
       const caption = figure.querySelector('figcaption');
       return {
-        src: img.getAttribute('src'),
-        alt: img.getAttribute('alt') || '',
-        caption: caption ? caption.textContent.trim() : ''
+        src: img ? img.getAttribute('src') : null,
+        alt: img ? img.getAttribute('alt') || '' : '',
+        caption: caption ? caption.innerText.trim() : ''
       };
     });
 

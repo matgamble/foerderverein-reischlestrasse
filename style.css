@@ -287,6 +287,12 @@ h3 {
   flex: 0 0 260px;
 }
 
+.project-gallery img.logo-fit {
+  object-fit: contain;
+  background: #f3efe6;
+  padding: 20px;
+}
+
 .project-gallery figcaption {
   text-align: left;
   font-size: 0.9rem;
@@ -338,6 +344,18 @@ h3 {
   border-radius: 10px;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   user-select: none;
+}
+
+.slideshow-placeholder {
+  width: min(90vw, 500px);
+  height: min(60vh, 400px);
+  border: 3px dashed rgba(255, 255, 255, 0.5);
+  border-radius: 14px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  align-items: center;
+  justify-content: center;
 }
 
 .slideshow-close,
@@ -392,6 +410,7 @@ h3 {
   color: #fff;
   font-size: 17px;
   font-weight: 700;
+  white-space: pre-line;
   background: rgba(255, 255, 255, 0.15);
   padding: 6px 18px;
   border-radius: 16px;
