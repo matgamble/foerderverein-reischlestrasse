@@ -13,9 +13,21 @@ Dieses Repository ist die Website des Fördervereins der Kita Reischlestraße (A
 - Ton bei diktierten/frei erzählten Inhalten: nie roh übernehmen, sondern wertschätzend und warm umformulieren, ohne Inhalt zu verändern oder zu erfinden.
 
 ## Struktur
-- `index.html` – einzige Seite (Stand: erstes Grundgerüst), gestylt über `style.css`.
+- `index.html` – einzige Seite, gestylt über `style.css`. Navigation: sticky `.topbar` mit `<details class="mobile-menu">` (1:1 Muster aus dem Teambuch-Repo, `nav.js` = die Nav-Sync-Logik aus `checklists.js`, ohne die Teambuch-spezifischen Checklisten-Teile). Ab 1024px Breite ist das Menü dauerhaft als Pill-Reihe sichtbar statt eingeklappt.
 - Bewusst **kein** iframe-Wrapper (im Teambuch-Repo historisch bedingt, hier nicht nötig).
-- Abschnitte „Über uns" und „Kontakt" sind aktuell Platzhalter („Inhalte folgen") – echte Vereinsinhalte (Ziele, Vorstand, Kontaktdaten, Bankverbindung etc.) müssen von der Nutzerin geliefert werden, nie erfinden.
+- Seitenstruktur (Stand: Grundgerüst, per Web-Recherche zu typischen Kita-Förderverein-Websites zusammengestellt) – alle Abschnitte außer der Überschriften/Struktur sind Platzhalter „Inhalte folgen", **nie Inhalte erfinden**, nur von der Nutzerin gelieferte Daten einsetzen:
+  - Das sind wir (Vorstand/Kita-Leitung mit Fotogalerie)
+  - Über uns (Vereinszweck, Gründungsjahr)
+  - Was wir fördern (konkrete Projekte/Anschaffungen)
+  - Mitglied werden (Ablauf, Beitragshöhe, Beitrittsformular)
+  - Spenden (Bankverbindung/Girocode-QR – siehe Abschnitt unten, Spendenquittungs-Hinweis)
+  - Termine (Veranstaltungen)
+  - Satzung & Downloads (Satzung-PDF, Protokolle, Presse-Logo)
+  - Kontakt
+  - **Impressum** und **Datenschutzerklärung** (rechtlich verpflichtend, § 5 DDG bzw. DSGVO) – als eigene Abschnitte am Seitenende, aus dem Footer verlinkt (`.legal-links`), aktuell nur Checkliste der Pflichtangaben, kein Fließtext. Vor echtem Go-Live zwingend mit echten Daten (Vorstand nach § 26 BGB, Vereinsregisternummer, Registergericht etc.) füllen bzw. Datenschutzerklärung rechtlich erstellen lassen – hier nichts raten oder generisch vorformulieren.
+
+## Spenden-QR-Code (Girocode)
+- Nutzerin möchte einen Girocode/EPC-QR-Code für Spenden (siehe Abschnitt „Spenden"). Braucht dafür die **IBAN** (BLZ/Kontonummer allein reicht nicht) + Kontoinhaber, optional BIC/fester Betrag/Verwendungszweck. Nutzerin trägt die Daten in einer künftigen Session nach – dann Girocode erzeugen (z. B. per `qrcode`-Bibliothek mit EPC069-12-Zeilenformat) und im Spenden-Abschnitt einbinden.
 
 ## Foto-Galerien
 - `slideshow.js` (1:1 aus dem Teambuch-Repo übernommen, generisch) macht jede `.special-photo-gallery` automatisch im Vollbild swipebar (Touch, Pfeiltasten, Escape). Muster: `<div class="special-photo-gallery" aria-label="..."><figure><a class="gallery-link" href="#id"><img ...></a><figcaption>...</figcaption></figure>...</div>`.

@@ -9,20 +9,29 @@
 <body>
 <header class="topbar">
   <strong>Förderverein Kita Reischlestraße</strong>
-  <nav>
-    <a href="#das-sind-wir">Das sind wir</a>
-    <a href="#ueber-uns">Über uns</a>
-    <a href="#kontakt">Kontakt</a>
-  </nav>
+  <details class="mobile-menu">
+    <summary>Inhalt öffnen</summary>
+    <nav>
+      <a href="#das-sind-wir">Das sind wir</a>
+      <a href="#ueber-uns">Über uns</a>
+      <a href="#was-wir-foerdern">Was wir fördern</a>
+      <a href="#mitglied-werden">Mitglied werden</a>
+      <a href="#spenden">Spenden</a>
+      <a href="#termine">Termine</a>
+      <a href="#satzung-downloads">Satzung &amp; Downloads</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </details>
 </header>
 
 <main>
-  <section class="cover-section">
+  <section id="start" class="cover-section">
     <img class="cover" src="assets/cover/foerderverein-cover.png" alt="Förderverein Kita Reischlestraße">
   </section>
 
-  <section id="das-sind-wir">
-    <h2>Das sind wir</h2>
+  <section id="das-sind-wir" class="page">
+    <p class="label">Das sind wir</p>
+    <h2>Vorstand &amp; Kita-Leitung</h2>
     <div class="special-photo-gallery-placeholder" aria-label="Vorstand und Kita-Leitung">
       <figure>
         <div class="image-placeholder">Foto folgt</div>
@@ -43,20 +52,115 @@
     </div>
   </section>
 
-  <section id="ueber-uns">
-    <h2>Über uns</h2>
-    <p class="placeholder-note">Inhalte folgen – hier kommt der Text zum Förderverein hin (Ziele, Vorstand, was der Verein unterstützt usw.).</p>
+  <section id="ueber-uns" class="page">
+    <p class="label">Über uns</p>
+    <h2>Wer wir sind und was wir wollen</h2>
+    <p class="placeholder-note">
+      Inhalte folgen. Hier gehört rein: der Vereinszweck (was der Förderverein
+      laut Satzung unterstützt), das Gründungsjahr, ein kurzer Rückblick auf
+      wichtige Stationen, und in ein bis zwei Sätzen, warum es den Verein
+      gibt und wem er hilft.
+    </p>
   </section>
 
-  <section id="kontakt">
-    <h2>Kontakt</h2>
+  <section id="was-wir-foerdern" class="page">
+    <p class="label">Was wir fördern</p>
+    <h2>Projekte &amp; Anschaffungen</h2>
+    <p class="placeholder-note">
+      Inhalte folgen. Hier gehören konkrete Beispiele rein, was mit den
+      Spenden- und Mitgliedsbeiträgen bereits finanziert wurde oder werden
+      soll – z. B. Spielgeräte, Ausflüge, Ausstattung der Lernwerkstätten
+      oder besondere Aktionen. Gerne mit Fotos, sobald welche da sind.
+    </p>
+  </section>
+
+  <section id="mitglied-werden" class="page">
+    <p class="label">Mitglied werden</p>
+    <h2>Wie man dabei sein kann</h2>
+    <p class="placeholder-note">
+      Inhalte folgen. Hier gehört rein: wie die Mitgliedschaft abläuft, die
+      Höhe des Mitgliedsbeitrags, und im besten Fall ein Beitrittsformular
+      zum Herunterladen (PDF).
+    </p>
+  </section>
+
+  <section id="spenden" class="page">
+    <p class="label">Spenden</p>
+    <h2>Den Verein unterstützen</h2>
+    <p class="placeholder-note">
+      Inhalte folgen. Hier kommen die Bankverbindung (IBAN, Kontoinhaber)
+      und ein QR-Code (Girocode) zum Scannen für Überweisungen hin, sobald
+      die Kontodaten feststehen. Außerdem: Hinweis zu Spendenquittungen,
+      falls der Verein gemeinnützig ist.
+    </p>
+  </section>
+
+  <section id="termine" class="page">
+    <p class="label">Termine</p>
+    <h2>Veranstaltungen</h2>
+    <p class="placeholder-note">
+      Inhalte folgen. Hier gehören anstehende Termine rein – z. B.
+      Mitgliederversammlung, Vereinsfeste, Flohmärkte oder andere Aktionen.
+    </p>
+  </section>
+
+  <section id="satzung-downloads" class="page">
+    <p class="label">Satzung &amp; Downloads</p>
+    <h2>Zum Nachlesen</h2>
+    <p class="placeholder-note">
+      Inhalte folgen. Hier gehören Downloads rein – z. B. die Vereinssatzung
+      als PDF, Protokolle der Mitgliederversammlung und ggf. das Logo für
+      Presse/Partner.
+    </p>
+  </section>
+
+  <section id="kontakt" class="page">
+    <p class="label">Kontakt</p>
+    <h2>So erreicht man uns</h2>
     <p class="placeholder-note">Inhalte folgen – hier kommen Kontaktdaten hin, sobald sie feststehen.</p>
   </section>
 </main>
 
 <footer class="site-footer">
   <img src="assets/branding/logo-foerderverein-kita-reischlestrasse.png" alt="Förderverein Kita Reischlestraße">
+  <nav class="legal-links">
+    <a href="#impressum">Impressum</a>
+    <a href="#datenschutz">Datenschutz</a>
+  </nav>
 </footer>
+
+<section id="impressum" class="page legal-page">
+  <p class="label">Pflichtangabe</p>
+  <h2>Impressum</h2>
+  <p class="placeholder-note">
+    Gesetzlich vorgeschrieben (§ 5 DDG) – muss vor Veröffentlichung mit
+    echten Daten gefüllt werden:
+  </p>
+  <ul class="legal-checklist">
+    <li>Name und Anschrift des Vereins</li>
+    <li>Vertretungsberechtigter Vorstand nach § 26 BGB (Name(n) + Funktion)</li>
+    <li>Registergericht und Vereinsregisternummer</li>
+    <li>Kontakt: E-Mail-Adresse (und ggf. Telefonnummer)</li>
+    <li>Umsatzsteuer-ID, falls vorhanden</li>
+  </ul>
+  <p><a href="#start">Zurück nach oben</a></p>
+</section>
+
+<section id="datenschutz" class="page legal-page">
+  <p class="label">Pflichtangabe</p>
+  <h2>Datenschutzerklärung</h2>
+  <p class="placeholder-note">
+    Gesetzlich vorgeschrieben (DSGVO) – muss vor Veröffentlichung erstellt
+    werden. Dafür muss feststehen: welches Hosting verwendet wird, ob ein
+    Kontaktformular oder externe Dienste (z. B. Statistik-Tools) zum
+    Einsatz kommen, und wer datenschutzrechtlich verantwortlich ist.
+    Am besten mit einem Datenschutz-Generator oder rechtlicher Beratung
+    erstellen, nicht raten.
+  </p>
+  <p><a href="#start">Zurück nach oben</a></p>
+</section>
+
 <script src="slideshow.js"></script>
+<script src="nav.js"></script>
 </body>
 </html>
