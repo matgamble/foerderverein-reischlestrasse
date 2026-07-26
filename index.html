@@ -22,6 +22,21 @@
       <a href="#kontakt">Kontakt</a>
     </nav>
   </details>
+  <details class="lang-picker">
+    <summary class="lang-picker-current" aria-label="Sprache auswählen">
+      <span class="lang-flag" id="lang-current-flag">🌐</span>
+    </summary>
+    <div class="lang-picker-menu">
+      <button type="button" class="lang-option" data-lang="">🇩🇪 Deutsch</button>
+      <button type="button" class="lang-option" data-lang="tr">🇹🇷 Türkçe</button>
+      <button type="button" class="lang-option" data-lang="ru">🇷🇺 Русский</button>
+      <button type="button" class="lang-option" data-lang="uk">🇺🇦 Українська</button>
+      <button type="button" class="lang-option" data-lang="fr">🇫🇷 Français</button>
+      <button type="button" class="lang-option" data-lang="es">🇪🇸 Español</button>
+      <button type="button" class="lang-option" data-lang="pt">🇵🇹 Português</button>
+      <button type="button" class="lang-option" data-lang="pl">🇵🇱 Polski</button>
+    </div>
+  </details>
   <div id="google_translate_element" class="lang-switcher"></div>
 </header>
 
@@ -245,6 +260,7 @@
 
 <script src="slideshow.js"></script>
 <script src="nav.js"></script>
+<script src="lang.js"></script>
 <script>
   function googleTranslateElementInit() {
     new google.translate.TranslateElement({
