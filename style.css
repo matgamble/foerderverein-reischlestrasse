@@ -105,26 +105,6 @@ a {
   background: #e7eadf;
 }
 
-/* The real Google widget stays in the DOM (needed so it can actually
-   translate the page) but is visually replaced by our own flag picker
-   below - kept off-screen rather than display:none so Google's script
-   can still measure/initialize it. */
-.lang-switcher {
-  position: absolute;
-  left: -9999px;
-  top: -9999px;
-}
-
-/* Google injects an intrusive top banner + shifts the whole page down
-   while translating; this keeps our own layout stable. */
-.goog-te-banner-frame.skiptranslate {
-  display: none !important;
-}
-
-body {
-  top: 0 !important;
-}
-
 .lang-picker {
   position: relative;
   flex: 0 0 auto;
