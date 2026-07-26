@@ -22,6 +22,7 @@
       <a href="#kontakt">Kontakt</a>
     </nav>
   </details>
+  <div id="google_translate_element" class="lang-switcher"></div>
 </header>
 
 <main>
@@ -210,11 +211,21 @@
     der <a href="https://docs.github.com/site-policy/privacy-policies/github-privacy-statement" target="_blank" rel="noopener">Datenschutzerklärung von GitHub</a>.
   </p>
 
-  <h3>Cookies, Kontaktformulare, Statistik-Tools</h3>
+  <h3>Sprachauswahl (Google Übersetzer)</h3>
   <p>
-    Diese Website selbst setzt aktuell keine eigenen Cookies, bindet
-    keine Statistik- oder Tracking-Tools ein und enthält kein
-    Kontaktformular.
+    Für die Sprachauswahl oben auf der Seite wird das Google-Website-
+    Übersetzer-Widget von Google Ireland Limited eingebunden. Bei
+    Nutzung der Sprachauswahl lädt der Browser Skripte von
+    Google-Servern nach und kann ein Cookie setzen, das die gewählte
+    Sprache speichert. Details dazu in der
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Datenschutzerklärung von Google</a>.
+  </p>
+
+  <h3>Weitere Cookies, Kontaktformulare, Statistik-Tools</h3>
+  <p>
+    Über die Sprachauswahl hinaus setzt diese Website aktuell keine
+    eigenen Cookies, bindet keine Statistik- oder Tracking-Tools ein
+    und enthält kein Kontaktformular.
   </p>
   <p class="placeholder-note">
     Falls sich das ändert (z. B. Kontaktformular oder Statistik-Tool
@@ -234,5 +245,16 @@
 
 <script src="slideshow.js"></script>
 <script src="nav.js"></script>
+<script>
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({
+      pageLanguage: 'de',
+      includedLanguages: 'tr,ru,uk,fr,es,pt,pl',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>

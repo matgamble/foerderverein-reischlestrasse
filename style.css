@@ -98,11 +98,46 @@ a {
   background: #e7eadf;
 }
 
+.lang-switcher {
+  margin-top: 10px;
+}
+
+.lang-switcher .goog-te-gadget {
+  font-family: Arial, sans-serif !important;
+  font-size: 0.75rem !important;
+  color: #12264a !important;
+}
+
+.lang-switcher select.goog-te-combo {
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  padding: 6px 10px;
+  border-radius: 10px;
+  border: 1px solid rgba(93, 118, 93, 0.25);
+  background: #f3efe6;
+  color: #12264a;
+}
+
+/* Google injects an intrusive top banner + shifts the whole page down
+   while translating; this keeps our own layout stable. */
+.goog-te-banner-frame.skiptranslate {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
 @media (min-width: 1024px) {
   .topbar {
     display: flex;
     align-items: center;
     gap: 20px;
+  }
+
+  .lang-switcher {
+    margin-top: 0;
+    margin-left: auto;
   }
 
   .topbar strong {
