@@ -382,7 +382,7 @@ body {
 main {
   max-width: 880px;
   margin: 0 auto;
-  padding: 40px 24px 80px;
+  padding: 40px 14px 80px;
 }
 
 .page {
@@ -487,7 +487,7 @@ h3 {
 .legal-page {
   max-width: 880px;
   margin: 0 auto;
-  padding: 0 24px 60px;
+  padding: 0 14px 60px;
 }
 
 .legal-checklist {
