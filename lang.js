@@ -8,12 +8,18 @@
   }
 
   function setLanguage(code, flagHtml, attemptsLeft) {
-    if (attemptsLeft === undefined) attemptsLeft = 10;
+    if (attemptsLeft === undefined) attemptsLeft = 20;
     const select = findGoogleSelect();
-    if (!select) {
+    if (!select || !select.options.length) {
       // Google widget not ready yet (slow network) - try a few more times,
       // then give up quietly (e.g. Google Translate blocked/unreachable).
       if (attemptsLeft > 0) setTimeout(() => setLanguage(code, flagHtml, attemptsLeft - 1), 300);
+      else console.warn('[lang] Google Translate widget did not load in time.');
+      return;
+    }
+    const hasOption = [...select.options].some((opt) => opt.value === code);
+    if (!hasOption) {
+      console.warn('[lang] Sprachcode "' + code + '" ist nicht in includedLanguages enthalten.');
       return;
     }
     select.value = code;

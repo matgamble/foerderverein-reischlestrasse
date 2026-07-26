@@ -111,9 +111,6 @@ a {
    can still measure/initialize it. */
 .lang-switcher {
   position: absolute;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
   left: -9999px;
   top: -9999px;
 }
