@@ -44,8 +44,15 @@ a {
   margin-bottom: 8px;
 }
 
+.topbar-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
 .mobile-menu {
-  width: 100%;
+  flex: 1 1 auto;
+  min-width: 0;
 }
 
 .mobile-menu summary {
@@ -123,7 +130,7 @@ body {
 
 .lang-picker {
   position: relative;
-  margin: 10px 0 0;
+  flex: 0 0 auto;
 }
 
 .lang-picker-current {
@@ -148,7 +155,7 @@ body {
   position: absolute;
   z-index: 20;
   top: 44px;
-  left: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -185,13 +192,12 @@ body {
     gap: 20px;
   }
 
-  .lang-picker {
-    margin: 0 0 0 auto;
+  .topbar-row {
+    flex: 1 1 auto;
   }
 
-  .lang-picker-menu {
-    left: auto;
-    right: 0;
+  .lang-picker {
+    margin-left: auto;
   }
 
   .topbar strong {
