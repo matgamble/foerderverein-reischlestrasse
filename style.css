@@ -164,6 +164,16 @@ h2 {
   margin-top: 0;
 }
 
+h3 {
+  font-family: Georgia, serif;
+  color: #12264a;
+  margin: 28px 0 6px;
+}
+
+.legal-page h3:first-of-type {
+  margin-top: 20px;
+}
+
 .placeholder-note {
   background: #fff;
   border: 1px dashed #c8a45a;
