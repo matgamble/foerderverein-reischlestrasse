@@ -324,14 +324,28 @@ h3 {
   background: rgba(10, 14, 26, 0.94);
   z-index: 200;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 12px;
+  padding: 60px 16px 20px;
   touch-action: none;
+}
+
+.slideshow-stage {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex: 1 1 auto;
+  min-height: 0;
 }
 
 .slideshow-viewport {
   width: min(96vw, 1900px);
-  height: min(92vh, 1320px);
+  height: 100%;
+  max-height: min(80vh, 1320px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -401,11 +415,10 @@ h3 {
 }
 
 .slideshow-caption {
-  position: absolute;
-  bottom: 64px;
-  left: 50%;
-  transform: translateX(-50%);
-  max-width: 80vw;
+  flex: 0 0 auto;
+  max-width: min(80vw, 700px);
+  max-height: 22vh;
+  overflow-y: auto;
   text-align: center;
   color: #fff;
   font-size: 17px;
@@ -417,10 +430,7 @@ h3 {
 }
 
 .slideshow-counter {
-  position: absolute;
-  bottom: 24px;
-  left: 50%;
-  transform: translateX(-50%);
+  flex: 0 0 auto;
   color: #fff;
   font-weight: 700;
   background: rgba(255, 255, 255, 0.15);

@@ -6,12 +6,14 @@
     overlay.className = 'slideshow-overlay';
     overlay.innerHTML = `
       <button class="slideshow-close" aria-label="Schließen">&times;</button>
-      <button class="slideshow-prev" aria-label="Vorherige Folie">&lsaquo;</button>
-      <div class="slideshow-viewport">
-        <img class="slideshow-image" alt="">
-        <div class="slideshow-placeholder">Foto folgt</div>
+      <div class="slideshow-stage">
+        <button class="slideshow-prev" aria-label="Vorherige Folie">&lsaquo;</button>
+        <div class="slideshow-viewport">
+          <img class="slideshow-image" alt="">
+          <div class="slideshow-placeholder">Foto folgt</div>
+        </div>
+        <button class="slideshow-next" aria-label="Nächste Folie">&rsaquo;</button>
       </div>
-      <button class="slideshow-next" aria-label="Nächste Folie">&rsaquo;</button>
       <div class="slideshow-caption"></div>
       <div class="slideshow-counter"></div>
     `;
