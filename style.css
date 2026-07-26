@@ -134,6 +134,141 @@ a {
   text-align: center;
 }
 
+/* orca facts dropdown (from Teambuch) */
+.orka-dropdown {
+  width: calc(100% - 20px);
+  max-width: 700px;
+  margin: 4px auto 20px;
+  position: relative;
+  z-index: 1;
+}
+
+.orka-dropdown summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 18px;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.orka-dropdown summary::-webkit-details-marker {
+  display: none;
+}
+
+.orka-dropdown summary::marker {
+  content: "";
+}
+
+.orka-dropdown summary:hover,
+.orka-dropdown summary:focus-visible {
+  background: transparent;
+  transform: scale(1.06);
+}
+
+.orka-dropdown-icon {
+  width: 84px;
+  height: auto;
+  display: block;
+}
+
+.orka-dropdown-content {
+  background: rgba(255, 250, 240, 0.97);
+  border-radius: 22px;
+  padding: 22px 20px 26px;
+  margin-top: 6px;
+  border: 1px solid rgba(197, 139, 43, 0.18);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+}
+
+.orka-dropdown-content > p:first-of-type {
+  margin-top: 0;
+}
+
+.orka-dropdown-content h2 {
+  margin-top: 0;
+  color: #12264a;
+  font-family: Georgia, serif;
+}
+
+.orka-dropdown-content h3.orka-section-title {
+  margin: 28px 0 0;
+  color: #c58b2b;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+.check-card {
+  background: rgba(248, 241, 223, 0.95);
+  border-radius: 20px;
+  padding: 18px;
+  border: 1px solid rgba(197, 139, 43, 0.18);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.05);
+  min-width: 0;
+}
+
+.check-card h3 {
+  margin-top: 0;
+}
+
+.orka-fakt {
+  margin-top: 28px;
+  padding: 20px 18px;
+  border-radius: 20px;
+  background:
+    linear-gradient(135deg, rgba(141, 184, 210, 0.22), rgba(216, 228, 209, 0.55));
+  border: 1px solid rgba(18, 38, 74, 0.12);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  text-align: center;
+}
+
+.orka-symbol {
+  width: 120px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.orka-text {
+  margin: 0;
+}
+
+.orka-label-text {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 1.05em;
+}
+
+.orka-quote {
+  display: block;
+  font-style: italic;
+  line-height: 1.7;
+}
+
+@media (min-width: 640px) {
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .orka-symbol {
+    width: 140px;
+  }
+}
+
 .cover {
   max-width: 100%;
   height: auto;
