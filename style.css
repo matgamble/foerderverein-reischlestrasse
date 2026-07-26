@@ -274,6 +274,15 @@ h3 {
   font-size: 0.95rem;
 }
 
+.special-photo-gallery-placeholder img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  border-radius: 14px;
+}
+
 .image-placeholder {
   border: 3px dashed #c9b98f;
   background: linear-gradient(135deg, rgba(216, 228, 209, 0.55), rgba(243, 239, 230, 0.9));
