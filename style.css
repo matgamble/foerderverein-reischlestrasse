@@ -313,22 +313,9 @@ h3 {
   margin-bottom: 10px;
 }
 
-.project-card-photos {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
+.project-card .project-placeholder {
+  height: 220px;
   margin-bottom: 10px;
-}
-
-.project-card-photos img {
-  height: 160px;
-  margin-bottom: 0;
-}
-
-@media (max-width: 480px) {
-  .project-card-photos {
-    grid-template-columns: 1fr;
-  }
 }
 
 .project-card p {
