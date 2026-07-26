@@ -20,6 +20,11 @@
     select.dispatchEvent(new Event('change'));
     currentFlag.innerHTML = flagHtml || '🌐';
     picker.open = false;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    // Google's translation swap can reflow/shift the page a moment later
+    // (fonts, longer/shorter translated text); scroll to top again once
+    // that has settled so the visitor reliably ends up at the very top.
+    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 700);
   }
 
   picker.querySelectorAll('.lang-option').forEach((btn) => {
