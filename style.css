@@ -185,6 +185,17 @@ body {
   background: #f3efe6;
 }
 
+.lang-option-flag {
+  display: inline-flex;
+  align-items: center;
+  width: 20px;
+}
+
+.lang-option-flag svg {
+  border-radius: 2px;
+  display: block;
+}
+
 @media (min-width: 1024px) {
   .topbar {
     display: flex;
